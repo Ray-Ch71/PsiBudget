@@ -1,0 +1,3 @@
+Income | gkyg | 15.00 | 2025-06-03
+Spending | hh | 5.00 | 2025-06-03
+Spending | hkjh | 7.00 | 2025-06-03

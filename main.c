@@ -80,7 +80,7 @@ void updateBalance() {
     }
 
     char text[100];
-    sprintf(text, "Current Balance: â‚¬%.2f", balance);
+    sprintf(text, "Current Balance: €%.2f", balance);
     SetWindowText(hBalanceLabel, text);
 }
 
@@ -318,7 +318,7 @@ LRESULT CALLBACK PieChartWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPar
             SetBkMode(hdc, TRANSPARENT);
 
             char buf[200];
-            snprintf(buf, sizeof(buf), "%s: â‚¬%.2f", cats[i].name, cats[i].amount);
+            snprintf(buf, sizeof(buf), "%s: €%.2f", cats[i].name, cats[i].amount);
             TextOut(hdc, legendX + 30, legendY + 5 + i * 25, buf, (int)strlen(buf));
         }
 
@@ -351,7 +351,7 @@ LRESULT CALLBACK MainWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) 
         CreateWindow("BUTTON", "Show Transactions", WS_VISIBLE | WS_CHILD, 20, 80, 330, 40, hwnd, (HMENU)203, NULL, NULL);
         CreateWindow("BUTTON", "Show Spending Pie Chart", WS_VISIBLE | WS_CHILD, 20, 140, 330, 40, hwnd, (HMENU)204, NULL, NULL);
 
-        hBalanceLabel = CreateWindow("STATIC", "Current Balance: â‚¬0.00", WS_VISIBLE | WS_CHILD, 20, 220, 330, 30, hwnd, NULL, NULL, NULL);
+        hBalanceLabel = CreateWindow("STATIC", "Current Balance: €0.00", WS_VISIBLE | WS_CHILD, 20, 220, 330, 30, hwnd, NULL, NULL, NULL);
 
         ApplyFont(hwnd);
 
